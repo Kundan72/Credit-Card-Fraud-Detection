@@ -88,17 +88,6 @@ y_test = df_test['is_fraud']
 pred = model.predict(X_test)
 pred
 
-"""to be deleted very soon sadly 1"""
-
-drop_x = X.drop(columns=['merchant','category','gender','job'], inplace=False)
-drop_x
-
-"""to be deleted very soon sadly 2"""
-
-from imblearn.over_sampling import SMOTE
-
-sm = SMOTE(random_state=42)
-X_res, y_res = sm.fit_resample(drop_x, y)
 
 from sklearn.metrics import precision_score, recall_score, f1_score
 
